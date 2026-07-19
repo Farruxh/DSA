@@ -70,12 +70,33 @@ int main() {
     //     cout << endl;
     // }
 
-    // Pattern 7 Inverted Triangle
-    for(int i=0;i<4;i++){
-        for(int j=4;j>0;j--){
-            cout<< i+1;
+    // Pattern 7 Inverted Triangle for numbers 
+    int num = 4;
+    // for(int i=0; i<num; i++){
+    //     //for spaces
+    //     for(int j=0; j<i; j++){
+    //         cout<< " ";
+    //     }
+    //     //for numbers
+    //     for(int j=0; j<num-i; j++){
+    //         cout<< i+1;
+    //     }
+    //     cout<< endl;
+    // }
+
+    //Pattern 7 Inverted Triangle for characters
+    char ch = 'A';
+    for(int i=0; i<num; i++){
+        //for spaces
+        for(int j=0; j<i; j++){
+            cout<< " ";
         }
-        cout<< endl;
+        //for characters
+        for(int j=0; j<num-i; j++){
+            cout<< ch;
+        }
+        ch++;
+        cout << endl;
     }
     return 0;
 }
