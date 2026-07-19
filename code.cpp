@@ -60,7 +60,7 @@ int main() {
     //     cout << endl;
     // }
 
-    // Pattern 7 Floyed's triangle characters
+    //     Pattern 7 Floyed's triangle characters
     // char ch = 'A';
     // for(int i=0;i<4;i++){
     //     for(int j=0;j<i+1;j++){
@@ -70,8 +70,8 @@ int main() {
     //     cout << endl;
     // }
 
-    // Pattern 7 Inverted Triangle for numbers 
-    int num = 4;
+    //     Pattern 7 Inverted Triangle for numbers 
+    // int num = 4;
     // for(int i=0; i<num; i++){
     //     //for spaces
     //     for(int j=0; j<i; j++){
@@ -84,18 +84,36 @@ int main() {
     //     cout<< endl;
     // }
 
-    //Pattern 7 Inverted Triangle for characters
-    char ch = 'A';
-    for(int i=0; i<num; i++){
-        //for spaces
-        for(int j=0; j<i; j++){
-            cout<< " ";
+    //     Pattern 7 Inverted Triangle for characters
+    // char ch = 'A';
+    // for(int i=0; i<num; i++){
+    //     //for spaces
+    //     for(int j=0; j<i; j++){
+    //         cout<< " ";
+    //     }
+    //     //for characters
+    //     for(int j=0; j<num-i; j++){
+    //         cout<< ch;
+    //     }
+    //     ch++;
+    //     cout << endl;
+    // }
+
+    //      Pattern 8 Pyramid numbers
+    int n=4;
+    for(int i=0; i<n; i++){
+        // for spaces
+        for(int j=0; j<n-i-1; j++){
+            cout << " ";
         }
-        //for characters
-        for(int j=0; j<num-i; j++){
-            cout<< ch;
+        // for numbers
+        for(int j=0; j<i+1; j++){
+            cout << j+1 ;
         }
-        ch++;
+        // for backward numbers
+        for(int j=i; j>=1; j--){
+            cout << j;
+        }
         cout << endl;
     }
     return 0;
