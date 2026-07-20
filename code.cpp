@@ -100,19 +100,55 @@ int main() {
     // }
 
     //      Pattern 8 Pyramid numbers
+    // int n=4;
+    // for(int i=0; i<n; i++){
+    //     // for spaces
+    //     for(int j=0; j<n-i-1; j++){
+    //         cout << " ";
+    //     }
+    //     // for numbers
+    //     for(int j=0; j<i+1; j++){
+    //         cout << j+1 ;
+    //     }
+    //     // for backward numbers
+    //     for(int j=i; j>=1; j--){
+    //         cout << j;
+    //     }
+    //     cout << endl;
+    // }
+
+    //      Pattern 9 Hollow Diamond
     int n=4;
+    // top part of diamond
     for(int i=0; i<n; i++){
-        // for spaces
-        for(int j=0; j<n-i-1; j++){
+        // spaces
+        for(int j=0; j<=n-i-1; j++){
             cout << " ";
         }
-        // for numbers
-        for(int j=0; j<i+1; j++){
-            cout << j+1 ;
+        cout << "*";
+        if(i!=0){
+            // spaces
+            for(int j=0; j<2*i-1; j++){
+                cout << " ";
+            }
+            cout << "*";
         }
-        // for backward numbers
-        for(int j=i; j>=1; j--){
-            cout << j;
+        cout << endl;
+    }
+
+    // bottom part of diamond
+    for(int i=0; i<n-1; i++){
+        // spaces
+        for(int j=0; j<i+2; j++){
+            cout<< " ";
+        }
+        cout<< "*";
+        if(i != n-2){
+            // spaces
+            for(int j=0; j<2*(n-i)-5; j++){
+                cout<< " ";
+            }
+            cout << "*";
         }
         cout << endl;
     }
