@@ -157,11 +157,22 @@ int main() {
     //     cout << endl;
     // }
 
-    int a=4, b=8;
-    cout << (a & b) << endl;  // bitwise AND
-    cout << (a | b) << endl;  // bitwise OR
-    cout << (a ^ b) << endl;  // bitwise XOR
-    cout << (4 << 1) << endl; // bitwise left shift
-    cout << (4 >> 1) << endl; // bitwise right shift 
+    //int a=4, b=8;
+    // cout << (a & b) << endl;  // bitwise AND
+    // cout << (a | b) << endl;  // bitwise OR
+    // cout << (a ^ b) << endl;  // bitwise XOR
+    // cout << (4 << 1) << endl; // bitwise left shift
+    // cout << (4 >> 1) << endl; // bitwise right shift 
+
+
+    // Array basics
+    int num[] = {5,15,22,1,-15,24};
+    int smallest = INT32_MAX;
+    for(int i=0; i<6;i++){
+        if(num[i] < smallest){
+            smallest = num[i];
+        }
+    }
+    cout<< "The smallest number is: " << smallest;
     return 0;
 }
