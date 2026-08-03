@@ -5,6 +5,12 @@ int sum(int a, int b) {
     return a+b;
 }
 
+int changeArray(int arr[]){
+    for(int i=0; i<3; i++){
+        arr[i] = 2 * arr[i];
+    }
+}
+
 int main() {
 
     //      Pattern 1
@@ -166,13 +172,26 @@ int main() {
 
 
     // Array basics
-    int num[] = {5,15,22,1,-15,24};
-    int smallest = INT32_MAX;
-    for(int i=0; i<6;i++){
-        if(num[i] < smallest){
-            smallest = num[i];
-        }
+    // int num[] = {5,15,22,1,-15,24};
+    // int smallest = INT32_MAX;
+    // int largest = INT32_MIN;
+    // for(int i=0; i<6;i++){
+    //     if(num[i] < smallest){
+    //         smallest = num[i];
+    //     }
+    //     // OR
+    //     smallest = min(num[i], smallest);
+    //     largest = max(num[i], largest);
+    // }
+    // cout<< "The smallest number is: " << smallest << endl;
+    // cout<< "The largest number is: " << largest;
+
+    // PASS BY REFERENCE
+    int arr[] = {1,2,3};
+    changeArray(arr);
+    for(int i=0;i<3;i++){
+        cout<< arr[i] << " ";
     }
-    cout<< "The smallest number is: " << smallest;
+
     return 0;
 }
