@@ -51,6 +51,7 @@ int main() {
     //     cout << endl;
     // }
 
+
     //      Pattern 4
     // int n = 4;
     // for(int i=1;i<=n;i++){
@@ -60,6 +61,7 @@ int main() {
     //     cout << endl;
     // }
 
+
     //     Pattern 5
     // for(int i=0; i<4; i++){
     //     for(int j=i+1;j>0;j--){
@@ -67,6 +69,7 @@ int main() {
     //     }
     //     cout << endl;
     // }
+
 
     //     Pattern 6 Floyd's triangle numbers
     // int num=1;
@@ -78,6 +81,7 @@ int main() {
     //     cout << endl;
     // }
 
+
     //     Pattern 7 Floyed's triangle characters
     // char ch = 'A';
     // for(int i=0;i<4;i++){
@@ -87,6 +91,7 @@ int main() {
     //     }
     //     cout << endl;
     // }
+
 
     //     Pattern 7 Inverted Triangle for numbers 
     // int num = 4;
@@ -102,6 +107,7 @@ int main() {
     //     cout<< endl;
     // }
 
+
     //     Pattern 7 Inverted Triangle for characters
     // char ch = 'A';
     // for(int i=0; i<num; i++){
@@ -116,6 +122,7 @@ int main() {
     //     ch++;
     //     cout << endl;
     // }
+
 
     //      Pattern 8 Pyramid numbers
     // int n=4;
@@ -134,6 +141,7 @@ int main() {
     //     }
     //     cout << endl;
     // }
+
 
     //      Pattern 9 Hollow Diamond
     // int n=4;
@@ -194,6 +202,7 @@ int main() {
     // cout<< "The smallest number is: " << smallest << endl;
     // cout<< "The largest number is: " << largest;
 
+
     // PASS BY REFERENCE
     // int arr[] = {1,2,3};
     // changeArray(arr);
@@ -201,9 +210,24 @@ int main() {
     //     cout<< arr[i] << " ";
     // }
 
-    // LINEAR SEARCH
+ 
+    // LINEAR SEARCH  time complexity: O(n)
+    // int arr[] = {4,2,7,8,1,2,5};
+    // cout << "Number 7 index: " << linearSearch(arr, 7);
+
+
+    // REVERSING AN ARRAY USING 2 POINTERS APPROCH time complexity: O(n)
     int arr[] = {4,2,7,8,1,2,5};
-    cout << "Number 7 index: " << linearSearch(arr, 7);
+    int start = 0;
+    int end = 6;
+    while(start < end){
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+    for(int i=0;i<7;i++){
+        cout << arr[i] << " ";
+    }
 
     return 0;
 }
