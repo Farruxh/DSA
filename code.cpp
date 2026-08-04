@@ -11,8 +11,16 @@ int changeArray(int arr[]){
     }
 }
 
-int main() {
+int linearSearch(int arr[], int num){
+    for(int i=0; i<7; i++){
+        if(arr[i] == num){
+            return i;
+        }
+    }
+    return -1;
+}
 
+int main() {
     //      Pattern 1
     // int n = 6;
     // for(int i = 0; i <= n-1; i++){
@@ -187,11 +195,15 @@ int main() {
     // cout<< "The largest number is: " << largest;
 
     // PASS BY REFERENCE
-    int arr[] = {1,2,3};
-    changeArray(arr);
-    for(int i=0;i<3;i++){
-        cout<< arr[i] << " ";
-    }
+    // int arr[] = {1,2,3};
+    // changeArray(arr);
+    // for(int i=0;i<3;i++){
+    //     cout<< arr[i] << " ";
+    // }
+
+    // LINEAR SEARCH
+    int arr[] = {4,2,7,8,1,2,5};
+    cout << "Number 7 index: " << linearSearch(arr, 7);
 
     return 0;
 }
