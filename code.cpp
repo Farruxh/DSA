@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector> // implementation of vector is written in STL file, this header must be included to use vectors
 using namespace std;
 
 int sum(int a, int b) {
@@ -217,16 +218,28 @@ int main() {
 
 
     // REVERSING AN ARRAY USING 2 POINTERS APPROCH time complexity: O(n)
-    int arr[] = {4,2,7,8,1,2,5};
-    int start = 0;
-    int end = 6;
-    while(start < end){
-        swap(arr[start], arr[end]);
-        start++;
-        end--;
-    }
-    for(int i=0;i<7;i++){
-        cout << arr[i] << " ";
+    // int arr[] = {4,2,7,8,1,2,5};
+    // int start = 0;
+    // int end = 6;
+    // while(start < end){
+    //     swap(arr[start], arr[end]);
+    //     start++;
+    //     end--;
+    // }
+    // for(int i=0;i<7;i++){
+    //     cout << arr[i] << " ";
+    // }
+
+
+    // VECTORS (Dynamic Array, can be change dynamically, can resize itself, allot dynamic memory)
+
+    vector<int> vec; //size of this vector is zero
+    vector<int> vec1 = {1,2,3};
+    vector<int> vec2(3,0); // 3 = size of vector, 0 = value on each index
+    // cout << vec2[0];
+    vector<char> vec3 = {'a', 'b', 'c', 'd'};
+    for(char ch: vec3){     // for each loop
+        cout<< ch << endl;;
     }
 
     return 0;
