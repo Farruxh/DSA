@@ -233,13 +233,38 @@ int main() {
 
     // VECTORS (Dynamic Array, can be change dynamically, can resize itself, allot dynamic memory)
 
-    vector<int> vec; //size of this vector is zero
-    vector<int> vec1 = {1,2,3};
-    vector<int> vec2(3,0); // 3 = size of vector, 0 = value on each index
-    // cout << vec2[0];
-    vector<char> vec3 = {'a', 'b', 'c', 'd'};
-    for(char ch: vec3){     // for each loop
-        cout<< ch << endl;;
+    // vector<int> vec; //size of this vector is zero
+    // vector<int> vec1 = {1,2,3};
+    // vector<int> vec2(3,0); // 3 = size of vector, 0 = value on each index
+    // // cout << vec2[0];
+    // vector<char> vec3 = {'a', 'b', 'c', 'd'};
+    // for(char ch: vec3){     // for each loop
+    //     cout<< ch << endl;;
+    // }
+
+
+
+    // leetcode problem (find isolate number in an array)
+    // vector<int> vec = {4,1,2,1,2};
+    // int ans;
+    // for(int val: vec){
+    //     ans = ans ^ val;
+    // }
+    // cout << "The isolated value in the given array is: "<< ans;
+
+
+
+    //Subarray
+    int n = 5;
+    int arr[] = {1,2,3,4,5};
+    for(int strt = 0; strt<n; strt ++){
+        for(int end=strt; end< n; end++){
+            for(int i=strt; i<=end; i++){
+                cout<< arr[i];
+            }
+            cout<< " ";
+        }
+        cout<< endl;
     }
 
     return 0;
