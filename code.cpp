@@ -255,17 +255,29 @@ int main() {
 
 
     //Subarray
-    int n = 5;
+    // int n = 5;
+    // int arr[] = {1,2,3,4,5};
+    // for(int strt = 0; strt<n; strt ++){
+    //     for(int end=strt; end< n; end++){
+    //         for(int i=strt; i<=end; i++){
+    //             cout<< arr[i];
+    //         }
+    //         cout<< " ";
+    //     }
+    //     cout<< endl;
+    // }
+
+    // Maximum subarray sum, time complexity: O(n^2)
     int arr[] = {1,2,3,4,5};
-    for(int strt = 0; strt<n; strt ++){
-        for(int end=strt; end< n; end++){
-            for(int i=strt; i<=end; i++){
-                cout<< arr[i];
-            }
-            cout<< " ";
+    int maxSum = INT8_MIN;
+    for(int st=0; st<5;st++){
+        int currSum = 0;
+        for(int end=st; end<5; end++){
+            currSum += arr[end];
+            maxSum = max(currSum, maxSum);
         }
-        cout<< endl;
     }
+    cout << maxSum << " ";
 
     return 0;
 }
