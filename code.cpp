@@ -20,6 +20,18 @@ int linearSearch(int arr[], int num){
     }
     return -1;
 }
+vector<int> pairSum(vector<int> num, int target){
+    vector<int> ans;
+    for(int i=0;i<4;i++){
+        for(int j=i+1; j<4; j++){
+            if(num[i] + num[j] == target){
+                ans.push_back(i);
+                ans.push_back(j);
+                return ans;
+            }
+        }
+    }
+}
 
 int main() {
     //      Pattern 1
@@ -268,16 +280,22 @@ int main() {
     // }
 
     // Maximum subarray sum, time complexity: O(n^2)
-    int arr[] = {1,2,3,4,5};
-    int maxSum = INT8_MIN;
-    for(int st=0; st<5;st++){
-        int currSum = 0;
-        for(int end=st; end<5; end++){
-            currSum += arr[end];
-            maxSum = max(currSum, maxSum);
-        }
-    }
-    cout << maxSum << " ";
+    // int arr[] = {1,2,3,4,5};
+    // int maxSum = INT8_MIN;
+    // for(int st=0; st<5;st++){
+    //     int currSum = 0;
+    //     for(int end=st; end<5; end++){
+    //         currSum += arr[end];
+    //         maxSum = max(currSum, maxSum);
+    //     }
+    // }
+    // cout << maxSum << " ";
+
+    // Pair Sum, target sum: 9 (Brute Force Apporch) time complexity: O(n^2)
+    vector<int> arr = {2,7,11,15};
+    vector<int> ans = pairSum(arr, 18);
+
+    cout << ans[0] << " " << ans[1];
 
     return 0;
 }
