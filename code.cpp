@@ -21,14 +21,32 @@ int linearSearch(int arr[], int num){
     return -1;
 }
 vector<int> pairSum(vector<int> num, int target){
+    // Brute force approch (time complexity O(n^2))
     vector<int> ans;
-    for(int i=0;i<4;i++){
-        for(int j=i+1; j<4; j++){
-            if(num[i] + num[j] == target){
-                ans.push_back(i);
-                ans.push_back(j);
-                return ans;
-            }
+    // for(int i=0;i<4;i++){
+    //     for(int j=i+1; j<4; j++){
+    //         if(num[i] + num[j] == target){
+    //             ans.push_back(i);
+    //             ans.push_back(j);
+    //             return ans;
+    //         }
+    //     }
+    // }
+
+    // Optimized approch (time complexity O(n))
+    int sz = num.size();
+    int i=0, j=sz-1;
+    while(i<j){
+        int ps = num[i] + num[j];
+        if(ps > target){
+            j--;
+        }
+        else if(ps<target){
+            i++;
+        }else{
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
         }
     }
 }
@@ -291,9 +309,9 @@ int main() {
     // }
     // cout << maxSum << " ";
 
-    // Pair Sum, target sum: 9 (Brute Force Apporch) time complexity: O(n^2)
+    // Pair Sum, target sum 
     vector<int> arr = {2,7,11,15};
-    vector<int> ans = pairSum(arr, 18);
+    vector<int> ans = pairSum(arr, 26);
 
     cout << ans[0] << " " << ans[1];
 
